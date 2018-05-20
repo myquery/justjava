@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-    *method to submit order
+    *method to submit order; notice the View instance, if you don't pass the View class as an argument to the public method, the 
+    *xml template will not recognise the function or method.
     */
     public void submitOrder(View view) {
         display(quantity);
