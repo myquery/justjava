@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     *xml template will not recognise the function or method.
     */
     public void submitOrder(View view) {
-        display(quantity);
+        display(quantity * 5);
         displayPrice(quantity);
 
     }
@@ -66,8 +66,15 @@ public class MainActivity extends AppCompatActivity {
     *private method to calculate the total price of the quantity selected
     */
     private void displayPrice(int number) {
-        int quantityPrice = 5;
         TextView price = (TextView) findViewById(R.id.price_text_view);
-        price.setText(NumberFormat.getCurrencyInstance().format(number) * quantityPrice);
+        price.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+    
+    /**
+ * This method displays the given text on the screen.
+ */
+ private void displayMessage(String message) {
+    TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+    priceTextView.setText(message);
+}
 }
