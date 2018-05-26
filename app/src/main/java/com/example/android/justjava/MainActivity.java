@@ -82,22 +82,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * private method to calculate the total price of the quantity selected
-     */
-    private void displayPrice(int number) {
-        TextView price = (TextView) findViewById(R.id.price_text_view);
-        price.setText(NumberFormat.getCurrencyInstance().format(number));
-
-    }
-
+   
     /**
      * This method displays the given text on the screen.
      */
     private void displayMessage(String message) {
 
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(message);
     }
 
 
